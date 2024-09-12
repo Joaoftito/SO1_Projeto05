@@ -6,9 +6,9 @@ public class ThreadCavaleiros extends Thread {
 
 	private Semaphore semaforo;
 	private int idCavaleiros;
-	private static int verificacao;
 	private static int tocha = 1;
 	private static int pedra = 1;
+	private static int tentativas = 3;
 
 	public ThreadCavaleiros(int idCavaleiros, Semaphore semaforo) {
 		this.idCavaleiros = idCavaleiros;
@@ -59,19 +59,24 @@ public class ThreadCavaleiros extends Thread {
 	}
 
 	private int Tocha(int velocidade) {
-		velocidade = (int) ((Math.random() * 3) + 4);
+		velocidade = (int) ((Math.random() * 5) + 2);
 		System.out.println("#" + idCavaleiros + " Cavaleiro pegou a tocha!");
 		return velocidade;
 	}
 
 	private int Pedra(int velocidade) {
-		velocidade = (int) ((Math.random() * 3) + 4);
+		velocidade = (int) ((Math.random() * 5) + 2);
 		System.out.println("#" + idCavaleiros + " Cavaleiro pegou a pedra!");
 		return velocidade;
 	}
 
 	private void Portas() {
+		int monstro = (int) ((Math.random() * 0) + 4);
 		System.out.println("#" + idCavaleiros + " Cavaleiro chegou a porta");
+		int portas = (int) ((Math.random() * 1) + tentativas);
+		System.out.println(monstro);
+		tentativas--;
+		
 	}
 
 }
