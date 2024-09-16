@@ -50,7 +50,7 @@ public class ThreadTriatlo extends Thread {
 	}
 
 	public void Corrida() {
-		distancia = 300;
+		distancia = 3000;
 		tempo = 30;
 		for (percorrido = 0; percorrido < distancia; percorrido = percorrido + velocidade) {
 			velocidade = (int) ((Math.random() * 21) + 5);
@@ -59,7 +59,7 @@ public class ThreadTriatlo extends Thread {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-//			System.out.println("#" + idAtleta + " " + percorrido);
+			System.out.println("#" + idAtleta + " Atleta correu: " + percorrido + "m");
 		}
 	}
 
@@ -74,13 +74,13 @@ public class ThreadTriatlo extends Thread {
 			pontosTiro = (0 + (int) (Math.random() * ((10 - 0) + 1)));
 			alvo[i] = pontosTiro;
 			soma = soma + pontosTiro;
-//			System.out.println("#" + idAtleta + " " + pontosTiro);
+			System.out.println("#" + idAtleta + " Atleta fez: " + pontosTiro + " pontos");
 		}
 
 	}
 
 	public void Ciclismo() {
-		distancia = 500;
+		distancia = 5000;
 		tempo = 40;
 		for (percorrido = 0; percorrido < distancia; percorrido = percorrido + velocidade) {
 			velocidade = (int) ((Math.random() * 21) + 5);
@@ -89,7 +89,7 @@ public class ThreadTriatlo extends Thread {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-//			System.out.println("#" + idAtleta + " " + percorrido);
+			System.out.println("#" + idAtleta + " Atleta pedalou: " + percorrido + "m");
 		}
 	}
 
