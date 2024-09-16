@@ -39,8 +39,8 @@ public class ThreadCavaleiros extends Thread {
 	private void Corredor() {
 
 		int percurso = 2000;
-		velocidade = (int) ((Math.random() * 3) + 2);
 		for (i = 0; i < percurso; i = i + velocidade) {
+			velocidade = (int) ((Math.random() * 3) + 2);
 			try {
 				sleep(50);
 			} catch (Exception e) {
@@ -106,7 +106,8 @@ public class ThreadCavaleiros extends Thread {
 		if (i >= 1500 && i <= 1508 && pedra == 1 && velocidade == (int) ((Math.random() * 3) + 2)) {
 			pedra--;
 			velocidade = (int) ((Math.random() * 3) + 4);
-			System.out.println("#" + idCavaleiros + " Cavaleiro pegou a pedra brilhosa e teve sua velocidade aumentada!");
+			System.out.println(
+					"#" + idCavaleiros + " Cavaleiro pegou a pedra brilhante e teve sua velocidade aumentada!");
 		}
 	}
 }
